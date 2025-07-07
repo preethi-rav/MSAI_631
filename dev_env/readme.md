@@ -12,4 +12,5 @@ This project sets up a basic Python development environment using Flask and Jupy
 ## How to Run
 
 1. Install dependencies:
-   ```
+   ```bash
+   pip install -r requirements.txt
