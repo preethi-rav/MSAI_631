@@ -1,0 +1,170 @@
+<!-- <!DOCTYPE html>
+<html>
+<head>
+    <title>Chatbot with Sentiment</title>
+    <script>
+        async function sendMessage() {
+            const input = document.getElementById("userInput").value;
+            const res = await fetch("http://localhost:3980/analyze", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ text: input })
+            });
+
+            const data = await res.json();
+            document.getElementById("response").innerText = "Sentiment: " + data.sentiment;
+        }
+    </script>
+</head>
+<body>
+    <h2>Chatbot Sentiment Test</h2>
+    <input type="text" id="userInput" placeholder="Say something..." />
+    <button onclick="sendMessage()">Send</button>
+    <p id="response"></p>
+</body>
+</html> -->
+
+
+
+<!-- 
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Chatbot Sentiment Analyzer</title>
+    <script>
+        async function sendMessage() {
+            const input = document.getElementById("userInput").value;
+
+            const res = await fetch("http://localhost:3980/analyze", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ text: input })
+            });
+
+            const data = await res.json();
+            document.getElementById("response").innerText = "Sentiment: " + data.sentiment;
+        }
+    </script>
+</head>
+<body>
+    <h2>Chatbot Sentiment Demo</h2>
+    <input type="text" id="userInput" placeholder="Say something..." />
+    <button onclick="sendMessage()">Send</button>
+    <p id="response"></p>
+</body>
+</html> -->
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Chatbot Sentiment Analyzer</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .chat-container {
+            background-color: white;
+            width: 400px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            padding: 10px;
+        }
+        .chat-history {
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            padding: 10px;
+            height: 300px;
+            overflow-y: auto;
+            margin-bottom: 10px;
+            background-color: #fafafa;
+        }
+        .chat-message {
+            margin: 5px 0;
+        }
+        .user {
+            color: #0066cc;
+            font-weight: bold;
+        }
+        .bot {
+            color: #333;
+        }
+        .input-area {
+            display: flex;
+            gap: 5px;
+        }
+        input[type="text"] {
+            flex: 1;
+            padding: 8px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+        }
+        button {
+            padding: 8px 12px;
+            border: none;
+            background-color: #0066cc;
+            color: white;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #004c99;
+        }
+    </style>
+    <script>
+        async function sendMessage() {
+            const inputElement = document.getElementById("userInput");
+            const userMessage = inputElement.value.trim();
+            const chatHistory = document.getElementById("chatHistory");
+
+            if (!userMessage) return; // ignore empty input
+
+            // Display user message
+            chatHistory.innerHTML += `<div class="chat-message"><span class="user">You:</span> ${userMessage}</div>`;
+
+            // Send message to backend
+            try {
+                const res = await fetch("http://localhost:3980/analyze", {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify({ text: userMessage })
+                });
+
+                const data = await res.json();
+                if (data.sentiment) {
+                    chatHistory.innerHTML += `<div class="chat-message"><span class="bot">Bot:</span> Sentiment = <b>${data.sentiment}</b></div>`;
+                } else {
+                    chatHistory.innerHTML += `<div class="chat-message"><span class="bot">Bot:</span> Unable to analyze sentiment.</div>`;
+                }
+
+            } catch (error) {
+                chatHistory.innerHTML += `<div class="chat-message"><span class="bot">Bot:</span> Error connecting to backend.</div>`;
+            }
+
+            // Auto-scroll to bottom
+            chatHistory.scrollTop = chatHistory.scrollHeight;
+
+            // Clear input
+            inputElement.value = "";
+        }
+    </script>
+</head>
+<body>
+    <div class="chat-container">
+        <h2>Chatbot Sentiment Demo</h2>
+        <div class="chat-history" id="chatHistory"></div>
+        <div class="input-area">
+            <input type="text" id="userInput" placeholder="Say something..." onkeydown="if(event.key==='Enter'){sendMessage();}" />
+            <button onclick="sendMessage()">Send</button>
+        </div>
+    </div>
+</body>
+</html>
