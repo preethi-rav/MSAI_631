@@ -1,0 +1,453 @@
+[
+  {
+    "concept": "If Statements",
+    "explanation": "If statements let you execute code only when a condition is true.",
+    "code_snippet": "x = 10\nif x > 5:\n    print('x is greater than 5')",
+    "practice_prompt": "Write an if statement that checks if a number is even and prints 'Even'."
+  },
+  {
+    "concept": "While Loops",
+    "explanation": "A while loop repeats a block of code as long as its condition is true.",
+    "code_snippet": "count = 0\nwhile count < 3:\n    print(count)\n    count += 1",
+    "practice_prompt": "Write a while loop that counts down from 5 to 1."
+  },
+  {
+    "concept": "Lists",
+    "explanation": "Lists are ordered collections of items that can store multiple values.",
+    "code_snippet": "fruits = ['apple', 'banana', 'cherry']\nprint(fruits[1])",
+    "practice_prompt": "Create a list of three colors and print the second one."
+  },
+  {
+    "concept": "Tuples",
+    "explanation": "Tuples are like lists, but they are immutable (cannot be changed).",
+    "code_snippet": "coordinates = (10, 20)\nprint(coordinates[0])",
+    "practice_prompt": "Create a tuple with three numbers and print the last one."
+  },
+  {
+    "concept": "Dictionaries",
+    "explanation": "Dictionaries store key-value pairs, letting you look up values by keys.",
+    "code_snippet": "person = {'name': 'Alice', 'age': 25}\nprint(person['name'])",
+    "practice_prompt": "Create a dictionary with keys 'city' and 'country'. Print the city."
+  },
+  {
+    "concept": "Sets",
+    "explanation": "Sets are unordered collections of unique items.",
+    "code_snippet": "numbers = {1, 2, 3, 3}\nprint(numbers)",
+    "practice_prompt": "Create a set with repeated numbers and print it to see duplicates removed."
+  },
+  {
+    "concept": "List Comprehensions",
+    "explanation": "List comprehensions provide a concise way to create lists.",
+    "code_snippet": "squares = [x**2 for x in range(5)]\nprint(squares)",
+    "practice_prompt": "Use a list comprehension to make a list of even numbers from 0 to 10."
+  },
+  {
+    "concept": "String Methods",
+    "explanation": "Strings come with built-in methods like lower(), upper(), and replace().",
+    "code_snippet": "text = 'Hello World'\nprint(text.lower())",
+    "practice_prompt": "Take a string and print it in all uppercase letters."
+  },
+  {
+    "concept": "f-Strings",
+    "explanation": "f-Strings allow easy string formatting by embedding variables directly.",
+    "code_snippet": "name = 'Alice'\nprint(f'Hello {name}')",
+    "practice_prompt": "Create an f-string that prints your name and age."
+  },
+  {
+    "concept": "Classes",
+    "explanation": "Classes define blueprints for objects with attributes and methods.",
+    "code_snippet": "class Dog:\n    def _init_(self, name):\n        self.name = name\nmy_dog = Dog('Buddy')\nprint(my_dog.name)",
+    "practice_prompt": "Create a class Car with an attribute brand and print the brand."
+  },
+  {
+    "concept": "Inheritance",
+    "explanation": "Inheritance allows a class to use methods and attributes from another class.",
+    "code_snippet": "class Animal:\n    def speak(self):\n        print('Some sound')\nclass Dog(Animal):\n    pass\nd = Dog()\nd.speak()",
+    "practice_prompt": "Create a base class Vehicle and a subclass Bike that inherits from it."
+  },
+  {
+    "concept": "Try/Except",
+    "explanation": "Try/Except blocks let you handle errors without crashing the program.",
+    "code_snippet": "try:\n    print(1 / 0)\nexcept ZeroDivisionError:\n    print('Cannot divide by zero')",
+    "practice_prompt": "Write code that catches an IndexError when accessing a list."
+  },
+  {
+    "concept": "With Statement",
+    "explanation": "The 'with' statement simplifies resource management like opening files.",
+    "code_snippet": "with open('file.txt', 'w') as f:\n    f.write('Hello')",
+    "practice_prompt": "Open a file using 'with' and write a sentence into it."
+  },
+  {
+    "concept": "Modules",
+    "explanation": "Modules are Python files with functions and variables you can import and use.",
+    "code_snippet": "import math\nprint(math.sqrt(16))",
+    "practice_prompt": "Import the random module and print a random number between 1 and 10."
+  },
+  {
+    "concept": "Lambda Functions",
+    "explanation": "Lambda functions are small anonymous functions defined with 'lambda'.",
+    "code_snippet": "double = lambda x: x * 2\nprint(double(4))",
+    "practice_prompt": "Write a lambda function that adds 10 to a number."
+  },
+  {
+    "concept": "Map Function",
+    "explanation": "map() applies a function to each item in a sequence.",
+    "code_snippet": "nums = [1, 2, 3]\nresult = list(map(lambda x: x * 2, nums))\nprint(result)",
+    "practice_prompt": "Use map() to square each number in a list."
+  },
+  {
+    "concept": "Filter Function",
+    "explanation": "filter() keeps items from a sequence that match a condition.",
+    "code_snippet": "nums = [1, 2, 3, 4]\nevens = list(filter(lambda x: x % 2 == 0, nums))\nprint(evens)",
+    "practice_prompt": "Use filter() to get numbers greater than 5 from a list."
+  },
+  {
+    "concept": "Decorators",
+    "explanation": "Decorators wrap functions to modify their behavior.",
+    "code_snippet": "def decorator(func):\n    def wrapper():\n        print('Before')\n        func()\n        print('After')\n    return wrapper\n@decorator\ndef hello():\n    print('Hello')\nhello()",
+    "practice_prompt": "Write a decorator that prints 'Start' before and 'End' after a function runs."
+  },
+  {
+    "concept": "Generators",
+    "explanation": "Generators use 'yield' to produce items one at a time, saving memory.",
+    "code_snippet": "def countdown(n):\n    while n > 0:\n        yield n\n        n -= 1\nfor num in countdown(3):\n    print(num)",
+    "practice_prompt": "Create a generator that yields the first 5 square numbers."
+  },
+  {
+    "concept": "List Slicing",
+    "explanation": "Slicing lets you extract parts of a list using start:stop:step.",
+    "code_snippet": "nums = [0, 1, 2, 3, 4, 5]\nprint(nums[1:4])",
+    "practice_prompt": "Slice a list of numbers to get only the last three elements."
+  },
+  {
+    "concept": "Boolean Values",
+    "explanation": "Booleans represent True or False values, often used in conditions and comparisons.",
+    "code_snippet": "is_sunny = True\nif is_sunny:\n    print('Go outside!')",
+    "practice_prompt": "Create a boolean variable called 'is_raining' and use it in an if statement to print a message."
+  },
+  {
+    "concept": "Type Conversion",
+    "explanation": "Type conversion lets you change the type of a value, such as from string to int.",
+    "code_snippet": "age_str = '30'\nage = int(age_str)\nprint(age + 5)",
+    "practice_prompt": "Convert a string number to an integer and add 10 to it, then print the result."
+  },
+  {
+    "concept": "Enumerate Function",
+    "explanation": "enumerate() lets you loop through a list and keep track of the index of each item.",
+    "code_snippet": "fruits = ['apple', 'banana', 'cherry']\nfor index, fruit in enumerate(fruits):\n    print(index, fruit)",
+    "practice_prompt": "Use enumerate() to print each element of a list with its index."
+  },
+  {
+    "concept": "Zip Function",
+    "explanation": "zip() combines two or more sequences into pairs of items.",
+    "code_snippet": "names = ['Alice', 'Bob']\nscores = [90, 85]\nfor name, score in zip(names, scores):\n    print(name, score)",
+    "practice_prompt": "Create two lists and use zip() to print their items in pairs."
+  },
+  {
+    "concept": "The Pass Statement",
+    "explanation": "The 'pass' statement is a placeholder used when a statement is required syntactically, but no action is needed.",
+    "code_snippet": "for i in range(5):\n    if i == 3:\n        pass\n    else:\n        print(i)",
+    "practice_prompt": "Write a loop that skips over a specific number using 'pass'."
+  },
+  {
+    "concept": "Nested For Loops",
+    "explanation": "You can place one for loop inside another to work with multi-level data or patterns.",
+    "code_snippet": "for i in range(2):\n    for j in range(3):\n        print(f'i={i}, j={j}')",
+    "practice_prompt": "Write a nested for loop that prints a 3x3 grid of asterisks."
+  },
+  {
+    "concept": "Range Function Variants",
+    "explanation": "The range() function can take one, two, or three arguments to control the start, stop, and step.",
+    "code_snippet": "for i in range(1, 10, 2):\n    print(i)",
+    "practice_prompt": "Use range() to print even numbers from 2 to 10."
+  },
+  {
+    "concept": "Looping Through Dictionaries",
+    "explanation": "You can use for loops to iterate over a dictionary's keys, values, or key-value pairs.",
+    "code_snippet": "person = {'name': 'Alice', 'age': 30}\nfor key, value in person.items():\n    print(key, value)",
+    "practice_prompt": "Write a for loop to print each key and value from a dictionary of three items."
+  },
+  {
+    "concept": "Break Statement",
+    "explanation": "The break statement ends a loop early when a condition is met.",
+    "code_snippet": "for i in range(10):\n    if i == 5:\n        break\n    print(i)",
+    "practice_prompt": "Write a loop that stops printing when it reaches the number 3."
+  },
+  {
+    "concept": "Continue Statement",
+    "explanation": "The continue statement skips the rest of the current loop iteration and moves to the next one.",
+    "code_snippet": "for i in range(5):\n    if i == 2:\n        continue\n    print(i)",
+    "practice_prompt": "Write a loop that prints numbers 0 to 4 but skips 2."
+  },
+  {
+  "concept": "Conditional Expressions (Ternary Operator)",
+  "explanation": "A compact inline way to choose between two expressions based on a condition.",
+  "code_snippet": "status = 'Even' if x % 2 == 0 else 'Odd'\nprint(status)",
+  "practice_prompt": "Write a one‑line expression using a conditional expression that prints 'Positive' if a number is positive, and 'Non‑positive' otherwise."
+  },
+  {
+    "concept": "Exception Handling with Finally",
+    "explanation": "The finally block runs whether or not an exception occurred, useful for cleanup.",
+    "code_snippet": "try:\n    result = 1 / x\nexcept ZeroDivisionError:\n    print('Division by zero!')\nfinally:\n    print('Execution complete.')",
+    "practice_prompt": "Write code that opens a file, attempts to read it (which might fail), and ensures a message is printed at the end regardless."
+  },
+  {
+    "concept": "Default Arguments",
+    "explanation": "Functions can have parameters with default values used when arguments are omitted.",
+    "code_snippet": "def greet(name='World'):\n    print(f'Hello, {name}!')\ngreet()\n# prints Hello, World!",
+    "practice_prompt": "Define a function with one required and one optional parameter, then call it with and without the optional argument."
+  },
+  {
+    "concept": "Keyword Arguments",
+    "explanation": "You can pass function arguments by name, allowing you to skip order and improve clarity.",
+    "code_snippet": "def describe_pet(animal_type, name):\n    print(f'I have a {animal_type} named {name}.')\ndescribe_pet(name='Whiskers', animal_type='cat')",
+    "practice_prompt": "Write a function for personal details, then call it using keyword arguments."
+  },
+  {
+    "concept": "Arbitrary Argument Lists (*args)",
+    "explanation": "You can define functions that take a variable number of positional arguments using *args.",
+    "code_snippet": "def sum_all(*args):\n    return sum(args)\nprint(sum_all(1, 2, 3, 4))",
+    "practice_prompt": "Create a function that accepts any number of arguments and returns their product."
+  },
+  {
+    "concept": "Arbitrary Keyword Arguments (**kwargs)",
+    "explanation": "Functions can accept an arbitrary number of keyword arguments as a dictionary using **kwargs.",
+    "code_snippet": "def print_info(**kwargs):\n    for key, val in kwargs.items():\n        print(f'{key}: {val}')\nprint_info(name='Alice', age=30)",
+    "practice_prompt": "Define a function that prints out any keyword arguments it receives."
+  },
+  {
+    "concept": "Unpacking Arguments",
+    "explanation": "You can call functions using * and ** to unpack sequences and dicts into arguments.",
+    "code_snippet": "numbers = [1, 2, 3]\ndef add(a, b, c):\n    return a + b + c\nprint(add(*numbers))\nkwargs = {'a': 4, 'b': 5, 'c': 6}\nprint(add(**kwargs))",
+    "practice_prompt": "Write a function that takes three parameters and call it by unpacking both a list and a dict."
+  },
+  {
+    "concept": "Recursive Functions",
+    "explanation": "A recursive function calls itself to solve smaller instances of the same problem.",
+    "code_snippet": "def factorial(n):\n    return 1 if n <= 1 else n * factorial(n - 1)\nprint(factorial(5))",
+    "practice_prompt": "Write a recursive function to calculate the nth Fibonacci number."
+  },
+  {
+    "concept": "Docstrings",
+    "explanation": "Docstrings are strings at the start of functions/classes/modules that explain their purpose.",
+    "code_snippet": "def add(a, b):\n    \"\"\"Return the sum of a and b.\"\"\"\n    return a + b\nprint(add.__doc__)",
+    "practice_prompt": "Add a docstring to a function and then print it via the `__doc__` attribute."
+  },
+  {
+    "concept": "Assertions",
+    "explanation": "Assertions check conditions that should always be true and raise an error otherwise.",
+    "code_snippet": "assert x > 0, 'x must be positive'\nprint('x is positive.')",
+    "practice_prompt": "Write code that uses an assertion to check that a list is not empty before proceeding."
+  },
+  {
+    "concept": "Context Managers (Custom)",
+    "explanation": "You can create objects used with `with` by defining `__enter__` and `__exit__` methods.",
+    "code_snippet": "class MyCtx:\n    def __enter__(self):\n        print('Entering')\n        return self\n    def __exit__(self, exc_type, exc, tb):\n        print('Exiting')\nwith MyCtx():\n    print('Inside')",
+    "practice_prompt": "Implement a simple custom context manager that logs entry and exit."
+  },
+  {
+    "concept": "Property Decorator",
+    "explanation": "The @property decorator allows you to define methods that can be accessed like attributes.",
+    "code_snippet": "class Rectangle:\n    def __init__(self, width, height):\n        self.width = width\n        self.height = height\n    @property\n    def area(self):\n        return self.width * self.height\nrect = Rectangle(3, 4)\nprint(rect.area)",
+    "practice_prompt": "Create a class with a property that calculates and returns a value based on attributes."
+  },
+  {
+    "concept": "Iterator Protocol",
+    "explanation": "Objects can be made iterable by defining `__iter__()` and `__next__()` methods.",
+    "code_snippet": "class Counter:\n    def __init__(self, low, high):\n        self.current = low\n        self.high = high\n    def __iter__(self):\n        return self\n    def __next__(self):\n        if self.current > self.high:\n            raise StopIteration\n        self.current += 1\n        return self.current - 1\nfor num in Counter(1, 3):\n    print(num)",
+    "practice_prompt": "Implement an iterable class that yields even numbers up to a limit."
+  },
+  {
+      "concept": "The `__name__ == '__main__'` Check",
+      "explanation": "This check lets you run code only when the file is executed directly, not when it's imported.",
+      "code_snippet": "def greet():\n    print('Hello!')\n\nif __name__ == '__main__':\n    greet()",
+      "practice_prompt": "Write a script that prints a greeting only when it's run directly, not when imported."
+  },
+  {
+      "concept": "Shallow Copy vs Deep Copy",
+      "explanation": "A shallow copy copies references, while a deep copy copies nested objects too.",
+      "code_snippet": "import copy\noriginal = [[1, 2], [3, 4]]\nshallow = copy.copy(original)\ndeep = copy.deepcopy(original)",
+      "practice_prompt": "Create a list of lists and demonstrate the difference between a shallow and deep copy."
+  },
+  {
+      "concept": "The `is` Operator",
+      "explanation": "`is` checks for object identity (same object in memory), not just equality of value.",
+      "code_snippet": "a = [1, 2]\nb = a\nprint(a is b)  # True\nprint(a == b)  # True",
+      "practice_prompt": "Create two identical lists and use `==` and `is` to compare them."
+  },
+  {
+      "concept": "The `in` Keyword",
+      "explanation": "The `in` keyword checks for membership in a list, string, set, or dictionary.",
+      "code_snippet": "colors = ['red', 'green', 'blue']\nif 'green' in colors:\n    print('Found green!')",
+      "practice_prompt": "Create a list and check if a specific element exists using `in`."
+  },
+  {
+      "concept": "String Formatting with `.format()`",
+      "explanation": "The `.format()` method allows you to insert values into strings.",
+      "code_snippet": "name = 'Alice'\nage = 25\nprint('Name: {}, Age: {}'.format(name, age))",
+      "practice_prompt": "Write a string using `.format()` to show a user's name and score."
+  },
+  {
+      "concept": "Using `any()` and `all()`",
+      "explanation": "`any()` returns True if any element is True; `all()` returns True only if all are True.",
+      "code_snippet": "numbers = [1, 2, 0]\nprint(any(numbers))  # True\nprint(all(numbers))  # False",
+      "practice_prompt": "Create a list of booleans and test it using both `any()` and `all()`."
+  },
+  {
+    "concept": "List Unpacking",
+    "explanation": "You can unpack elements of a list or tuple directly into variables.",
+    "code_snippet": "a, b, c = [1, 2, 3]\nprint(a, b, c)",
+    "practice_prompt": "Unpack a 3-element tuple into three variables and print them."
+  },
+  {
+    "concept": "Using `enumerate()` with a Start Index",
+    "explanation": "You can specify where to start the index in `enumerate()`.",
+    "code_snippet": "fruits = ['apple', 'banana']\nfor i, fruit in enumerate(fruits, start=1):\n    print(i, fruit)",
+    "practice_prompt": "Use `enumerate()` to list items starting from 100 instead of 0."
+  },
+  {
+    "concept": "Using `zip()` with Three Lists",
+    "explanation": "`zip()` can combine multiple iterables into tuples.",
+    "code_snippet": "a = [1, 2]\nb = ['a', 'b']\nc = ['x', 'y']\nfor x, y, z in zip(a, b, c):\n    print(x, y, z)",
+    "practice_prompt": "Combine three lists of your choice and print their combined tuples."
+  },
+  {
+    "concept": "List Multiplication",
+    "explanation": "You can create repeated lists using the `*` operator.",
+    "code_snippet": "zeros = [0] * 5\nprint(zeros)  # [0, 0, 0, 0, 0]",
+    "practice_prompt": "Create a list of ten 'Hello' strings using list multiplication."
+  },
+  {
+    "concept": "Comments",
+    "explanation": "Comments start with # and are ignored by Python. They are useful for documentation and notes.",
+    "code_snippet": "# This is a full-line comment\nprint('Hello')  # Inline comment",
+    "practice_prompt": "Write a program with at least one full-line comment and one inline comment."
+  },
+  {
+    "concept": "Arithmetic Operators",
+    "explanation": "Python supports operators like +, -, *, /, //, %, and ** for mathematical calculations.",
+    "code_snippet": "print(5 + 3)   # Addition\nprint(7 // 2)  # Floor division\nprint(2 ** 3)  # Exponentiation",
+    "practice_prompt": "Calculate the remainder of dividing 29 by 5."
+  },
+  {
+    "concept": "Comparison Operators",
+    "explanation": "Comparison operators like ==, !=, <, >, <=, >= are used in conditions to compare values.",
+    "code_snippet": "x = 10\nprint(x == 10)  # True\nprint(x > 5)     # True",
+    "practice_prompt": "Write comparisons that check if a number is between 1 and 100."
+  },
+  {
+    "concept": "Logical Operators",
+    "explanation": "Logical operators (and, or, not) combine or invert boolean values.",
+    "code_snippet": "x = 5\nprint(x > 0 and x < 10)  # True\nprint(not (x == 5))       # False",
+    "practice_prompt": "Use logical operators to check if a number is outside the range 10–20."
+  },
+  {
+    "concept": "Strings as Sequences",
+    "explanation": "Strings can be indexed and sliced like lists.",
+    "code_snippet": "word = 'python'\nprint(word[0])   # 'p'\nprint(word[-1])  # 'n'\nprint(word[2:5]) # 'tho'",
+    "practice_prompt": "Print the first three and last three letters of a string."
+  },
+  {
+    "concept": "String Concatenation and Repetition",
+    "explanation": "Strings can be joined using + and repeated using *.",
+    "code_snippet": "print('Hi' + ' there')\nprint('ha' * 3)  # 'hahaha'",
+    "practice_prompt": "Create a string that repeats your name five times."
+  },
+  {
+    "concept": "Escape Characters",
+    "explanation": "Backslash (\\) allows special characters like newlines and quotes in strings.",
+    "code_snippet": "print('First line\\nSecond line')\nprint('She said, \\\"Hello\\\"')",
+    "practice_prompt": "Print a string with both single and double quotes inside."
+  },
+  {
+    "concept": "Augmented Assignment Operators",
+    "explanation": "Shorthand operators like +=, -=, *=, /= update variables in place.",
+    "code_snippet": "x = 10\nx += 5\nprint(x)  # 15",
+    "practice_prompt": "Start with x = 100 and use augmented assignments to reduce it to 50."
+  },
+  {
+  "concept": "For Loops",
+  "explanation": "A for loop is used to iterate over a sequence (like a list, tuple, or string) and run a block of code for each item.",
+  "code_snippet": "fruits = ['apple', 'banana', 'cherry']\nfor fruit in fruits:\n    print(fruit)",
+  "practice_prompt": "Write a for loop that prints each character of the string 'python'."
+  }, 
+  {
+    "concept": "Variables",
+    "explanation": "Variables are labels used to store values in memory. You can assign any type of data to a variable.",
+    "code_snippet": "message = 'Hello world!'\nprint(message)",
+    "practice_prompt": "Create a variable that stores your favorite food and print it."
+  },
+  {
+    "concept": "Hello World",
+    "explanation": "The simplest Python program prints text using the print() function.",
+    "code_snippet": "print('Hello world!')",
+    "practice_prompt": "Write a program that prints 'Welcome to Python!'."
+  },
+  {
+    "concept": "User Input",
+    "explanation": "You can prompt the user for input using input(). The result is always a string, so you may need to convert it.",
+    "code_snippet": "name = input(\"What's your name? \")\nprint(f\"Hello, {name}!\")",
+    "practice_prompt": "Ask the user for their age and print it doubled."
+  },
+  {
+    "concept": "List Methods: append, insert, remove, pop",
+    "explanation": "Lists have built-in methods to add and remove items.",
+    "code_snippet": "users = ['alice']\nusers.append('bob')\nusers.insert(0, 'eve')\nusers.remove('alice')\nprint(users.pop())",
+    "practice_prompt": "Create a list of three animals, then add a new one with append and remove one with remove."
+  },
+  {
+    "concept": "List Sorting",
+    "explanation": "Lists can be sorted permanently with sort() or temporarily with sorted().",
+    "code_snippet": "names = ['bob', 'alice', 'zoe']\nnames.sort()\nprint(names)\nprint(sorted(names, reverse=True))",
+    "practice_prompt": "Make a list of five numbers and print them in ascending and descending order."
+  },
+  {
+    "concept": "List Length",
+    "explanation": "The len() function returns the number of elements in a list.",
+    "code_snippet": "fruits = ['apple', 'banana', 'cherry']\nprint(len(fruits))",
+    "practice_prompt": "Create a list of cities and print how many cities are in the list."
+  },
+  {
+    "concept": "Deleting Items",
+    "explanation": "You can delete list elements or dictionary keys using del.",
+    "code_snippet": "users = ['alice', 'bob', 'eve']\ndel users[1]\nprint(users)",
+    "practice_prompt": "Make a list of numbers and delete the first element using del."
+  },
+  {
+    "concept": "Copying Lists",
+    "explanation": "You can make a copy of a list using slicing [:].",
+    "code_snippet": "numbers = [1, 2, 3]\ncopy_numbers = numbers[:]\nprint(copy_numbers)",
+    "practice_prompt": "Copy a list of three colors and modify the copy without changing the original."
+  },
+  {
+    "concept": "Dictionary Methods: get, keys, values, items",
+    "explanation": "Dictionaries provide methods to safely access values and iterate over keys, values, or items.",
+    "code_snippet": "person = {'name': 'Alice'}\nprint(person.get('age', 'Unknown'))\nprint(person.keys())\nprint(person.values())\nprint(person.items())",
+    "practice_prompt": "Create a dictionary with two key-value pairs and print all keys and values."
+  },
+  {
+    "concept": "Nesting",
+    "explanation": "You can nest lists and dictionaries inside each other to store structured data.",
+    "code_snippet": "users = [\n  {'name': 'alice', 'age': 25},\n  {'name': 'bob', 'age': 30}\n]\nfor user in users:\n    print(user['name'])",
+    "practice_prompt": "Create a list of two dictionaries representing books, each with title and author."
+  },
+  {
+    "concept": "File Handling with Pathlib",
+    "explanation": "The pathlib module makes it easier to work with files and directories.",
+    "code_snippet": "from pathlib import Path\npath = Path('example.txt')\npath.write_text('Hello')\nprint(path.read_text())",
+    "practice_prompt": "Create a file and write 'Learning Python!' into it, then read and print the contents."
+  },
+  {
+    "concept": "JSON Module",
+    "explanation": "The json module allows saving and loading Python data structures in JSON format.",
+    "code_snippet": "import json\nfrom pathlib import Path\nnumbers = [1, 2, 3]\npath = Path('numbers.json')\npath.write_text(json.dumps(numbers))\nprint(json.loads(path.read_text()))",
+    "practice_prompt": "Save a dictionary to a JSON file and then load it back."
+  },
+  {
+    "concept": "Unit Testing with pytest",
+    "explanation": "You can write tests using pytest to ensure your code works as expected.",
+    "code_snippet": "def add(a, b):\n    return a + b\n\ndef test_add():\n    assert add(2, 3) == 5",
+    "practice_prompt": "Write a function that multiplies two numbers and a pytest test that checks it."
+  }
+]
+
